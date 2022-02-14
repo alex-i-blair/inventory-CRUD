@@ -20,13 +20,13 @@ export default function AuthPage({ setCurrentUser }) {
   return (
     <div>
       <form onSubmit={handleSignIn}>
-        <label htmlFor="">Email</label>
+        <label>Email</label>
         <input type="email" onChange={(e) => setEmail(e.target.value)} required name="email" />
-        <label htmlFor="">Password</label>
+        <label>Password</label>
         <input
-          type="password"
           onChange={(e) => setPassword(e.target.value)}
           required
+          type="password"
           name="password"
         />
         <button onClick={handleSignIn}>Sign In</button>

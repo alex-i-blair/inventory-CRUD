@@ -12,6 +12,14 @@ function App() {
     setCurrentUser('');
   }
 
+  useEffect(() => {
+    async function getUserObject() {
+      const data = await getUser();
+      setCurrentUser(data);
+    }
+    getUserObject();
+  }, []);
+
   return (
     <div className="App">
       <Router>
