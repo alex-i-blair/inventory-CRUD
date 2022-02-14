@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { getUser, logout } from './services/fetch-utils';
 import { BrowserRouter as Router, Switch, NavLink, Route, Redirect } from 'react-router-dom';
 import AuthPage from './AuthPage';
+import CreatePage from './CreatePage';
+import ListCocktails from './ListCocktails';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('supabase.auth.token'));
@@ -40,6 +42,12 @@ function App() {
               ) : (
                 <AuthPage setCurrentUser={setCurrentUser} />
               )}
+            </Route>
+            <Route exact path="/cocktails">
+              {!currentUser ? <Redirect to="/" /> : <ListCocktails />}
+            </Route>
+            <Route exact path="/create">
+              {currentUser ? <CreatePage /> : <Redirect to="/" />}
             </Route>
           </Switch>
         </main>

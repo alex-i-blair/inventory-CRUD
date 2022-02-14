@@ -11,7 +11,7 @@ export async function checkAuth() {
 
 export async function redirectIfLoggedIn() {
   if (await getUser()) {
-    location.replace('./home-page');
+    location.replace('./cocktails');
   }
 }
 
