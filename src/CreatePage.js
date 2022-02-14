@@ -40,12 +40,19 @@ export default function CreatePage() {
         </label>
         <label>
           Method
-          <textarea
-            type="text"
+          <select
+            defaultValue={1}
             onChange={(e) => setMethod(e.target.value)}
             required
             name="method"
-          />
+          >
+            <option value="1" disabled hidden>
+              Choose
+            </option>
+            <option>shaken</option>
+            <option>stirred</option>
+            <option>built</option>
+          </select>
         </label>
         <label>
           Served

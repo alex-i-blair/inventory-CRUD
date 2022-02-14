@@ -50,7 +50,7 @@ function App() {
             <Route exact path="/create">
               {currentUser ? <CreatePage /> : <Redirect to="/" />}
             </Route>
-            <Route exact path="/cocktail/:id">
+            <Route exact path="/cocktails/:id">
               {currentUser ? <Details /> : <Redirect to="/" />}
             </Route>
           </Switch>

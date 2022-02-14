@@ -16,7 +16,14 @@ export default function Details() {
 
   return (
     <div className="details">
-      <h1>{cocktail.name}</h1>
+      <h3>{cocktail.name}</h3>
+      <p>
+        A cocktail made with: <br></br>
+        {cocktail.ingredients}
+      </p>
+      <p>
+        It is {cocktail.method} and served {cocktail.served}
+      </p>
     </div>
   );
 }
