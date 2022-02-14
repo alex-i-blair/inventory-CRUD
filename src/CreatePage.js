@@ -11,7 +11,7 @@ export default function CreatePage() {
   const [served, setServed] = useState('');
 
   async function handleSubmit(e) {
-    e.preventDefault;
+    e.preventDefault();
     await createCocktail({
       name,
       ingredients,

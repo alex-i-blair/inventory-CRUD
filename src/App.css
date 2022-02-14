@@ -53,3 +53,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.details {
+  background-color: magenta;
+}

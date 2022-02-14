@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, NavLink, Route, Redirect } from 'react
 import AuthPage from './AuthPage';
 import CreatePage from './CreatePage';
 import ListCocktails from './ListCocktails';
+import Details from './Details';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('supabase.auth.token'));
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <Route exact path="/create">
               {currentUser ? <CreatePage /> : <Redirect to="/" />}
+            </Route>
+            <Route exact path="/cocktail/:id">
+              {currentUser ? <Details /> : <Redirect to="/" />}
             </Route>
           </Switch>
         </main>

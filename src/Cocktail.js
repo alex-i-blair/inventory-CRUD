@@ -4,7 +4,11 @@ export default function Cocktail({ cocktail }) {
   return (
     <Link to={`/cocktails/${cocktail.id}`}>
       <div>
-        <h2>{cocktail.name}</h2>
+        <h3>{cocktail.name}</h3>
+        <p>A cocktail made with {cocktail.ingredients}</p>
+        <p>
+          it is {cocktail.method} and served {cocktail.served}
+        </p>
       </div>
     </Link>
   );
