@@ -19,6 +19,7 @@ export default function AuthPage({ setCurrentUser }) {
 
   return (
     <div>
+      Test
       <form onSubmit={handleSignIn}>
         <label>Email</label>
         <input type="email" onChange={(e) => setEmail(e.target.value)} required name="email" />
